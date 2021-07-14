@@ -1,0 +1,18 @@
+Currency Exchange Service
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Currency Conversion Service
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+
+Feign Rest Client 
+Naming Server / Service Registry  (All microservices are registered in Naming Server)
+	Netflix Eureka Server (Spring Discovery Server )
+	Netflix Eureka Client (Spring Discovery Client )(Need to be included in all microservices to register in above Naming Server automatically)
+		Eureka Client includes spring load balancer. so with feign and Eureka client , client side load balancer is achieved
+Load Balancing 
+API Gateway : Authentication. Monitoring, Logging and resilency
+	Earier we are using Zul.
+	Zul is no longer supported by netflix.
+	So we are using "Spring Cloud Gateway" 
+	
